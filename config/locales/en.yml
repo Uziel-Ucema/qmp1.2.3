@@ -30,4 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      messages:
+        blank: "no puede estar en blanco"
+        too_short: "muy corta"
+    attributes:
+      user:
+        password: "Contraseña"

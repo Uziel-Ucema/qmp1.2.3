@@ -1,6 +1,5 @@
 class Prenda < ApplicationRecord
 
-
   belongs_to :prenda_tipo
 
   belongs_to :guardarropa

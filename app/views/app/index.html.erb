@@ -1,0 +1,30 @@
+<head>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+</head>
+<%= render 'sessions/header'%>
+
+<div id="login-section">
+    <div>
+        <div class="login-buttons">
+        <%= submit_tag "Prendas" , :class => "btn-login" %>
+        </div>    
+        <div class="login-buttons">
+        <%= submit_tag "Guardarropa" , :class => "btn-login" %>
+        </div>    
+        <div class="login-buttons">
+        <%= submit_tag "Atuendo" , :class => "btn-login" %>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+	$("#menu-toggle").click(function() {
+		$("#side-nav").toggle();
+	});
+});
+</script>
