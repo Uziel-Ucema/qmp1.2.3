@@ -42,9 +42,9 @@
       <%= render 'atuendos/prenda', prenda: atuendo.torso %>
     <%end%>
     <% if !(atuendo.piernas.blank?)  %>
-      <%= render 'atuendos', prenda: atuendo.piernas %>
+      <%= render 'atuendos/prenda', prenda: atuendo.piernas %>
     <%end%>
     <% if !(atuendo.pies.blank?)  %>
-      <%= render 'atuendos', prenda: atuendo.pies %>
+      <%= render 'atuendos/prenda', prenda: atuendo.pies %>
     <%end%>
 </div>
