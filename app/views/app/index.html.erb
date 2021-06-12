@@ -19,6 +19,45 @@
         <%= submit_tag "Atuendo" , :class => "btn-login" %>
         </div>
     </div>
+
+    <div>
+    <% if @guardarropas.blank? %>
+        <span class="text-center">Todavía no agregaste guardarropas <i class="fa fa-meh-o"></i></span>
+      <% else %>
+        <% @guardarropas.each do |g| %>
+          <li class="prendas-all-from-guardarropa-unit">
+            <%= render 'guardarropas/guardarropa', guardarropa: g %>
+          </li>
+      <% end %>
+    <% end %>
+    </div>
+
+    <div>
+    <% @guardarropas.each do |g| %>
+        <% if g.prendas.blank? %>
+        
+        <% else %>
+            <% g.prendas.each do |p| %>
+            <li class="prendas-all-from-guardarropa-unit">
+                <%= render 'guardarropas/prenda', prenda: p %>
+            </li>
+            <%end%>
+        <% end %>
+    <% end %>    
+    </div>
+    <div>
+    <% @guardarropas.each do |g| %>
+        <% if g.atuendos.blank? %>
+        <p>Test</p>
+        <% else %>
+            <% g.atuendos.each do |a| %>
+            <li class="prendas-all-from-guardarropa-unit">
+                <%= render 'atuendos/atuendo', atuendo: a %>
+            </li>
+            <%end%>
+        <% end %>
+    <% end %> 
+    </div>
 </div>
 
 <script>
